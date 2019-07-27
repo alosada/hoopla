@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Metrics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @metrics.each do |metric| %>
+      <tr>
+        <td><%= metric.name %></td>
+        <td><%= link_to 'Show', metric_path(metric.id) %></td>
+        <td><%= link_to 'Edit', edit_metric_path(metric.id) %></td>
+        <td><%= link_to 'Destroy', metric_path(metric.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Metric', new_metric_path %>
