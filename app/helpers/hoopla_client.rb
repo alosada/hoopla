@@ -29,11 +29,7 @@ class HooplaClient
       req.headers['Accept'] = 'application/vnd.hoopla.metric-value+json'
       req.body = data.to_json
     end
-    if response.status == 200
-      JSON.parse(response.body)
-    else
-      false
-    end
+    response.status == 200
   end
 
   def post(relative_url, data)
@@ -42,11 +38,7 @@ class HooplaClient
       req.headers['Accept'] = 'application/vnd.hoopla.metric-value+json'
       req.body = data.to_json
     end
-    if response.status == 200
-      JSON.parse(response.body)
-    else
-      false
-    end
+    response.status == 201
   end
 
   def get_relative_url(link)

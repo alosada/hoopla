@@ -14,7 +14,7 @@ class ValuesController < ApplicationController
       'value' => params[:value].to_f
     }
     if Value.create(@metric.href, data)
-      flash[:notice] = 'Value updated successfully'
+      flash[:notice] = 'Value created successfully'
     else
       flash[:alert] = 'There was a problem updatig this value'
     end
