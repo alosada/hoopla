@@ -1,0 +1,6 @@
+<%= form_tag @value.id.nil? ? metric_values_path : metric_value_path, method: @value.id.nil? ? :post : :put do %>
+<%= text_field_tag :user_id, @user.id, style: 'display:none;' %>
+  <%= label_tag :value %>
+  <%= text_field_tag :value, @value.value %>
+  <%= submit_tag %>
+<% end %>

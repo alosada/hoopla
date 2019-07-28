@@ -9,7 +9,7 @@ module Hooplable
     end
   end
 
-  def initialize(data)
+  def initialize(data = nil)
     return self if data.nil?
     @data = data
     data.each_pair do |k,v|
