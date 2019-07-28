@@ -42,7 +42,6 @@ class HooplaClient
       req.headers['Accept'] = 'application/vnd.hoopla.metric-value+json'
       req.body = data.to_json
     end
-    byebug
     if response.status == 200
       JSON.parse(response.body)
     else
